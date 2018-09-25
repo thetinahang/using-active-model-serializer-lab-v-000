@@ -3,7 +3,7 @@
   <h3><%= product.name %></h3>
   <div id="product-<%= product.id %>"><%= truncate(product.description) %></div>
   <%= product.orders.each do |order| %>
-    <%= order.id %>
+    <%= order.id %><br>
   <% end %>
   <button class="js-more" data-id="<%= product.id %>">More Info</button>
 <% end %>

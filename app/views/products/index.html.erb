@@ -4,7 +4,7 @@
   <div id="product-<%= product.id %>"><%= truncate(product.description) %></div>
   <%= product.orders.each do |order| %>
     <%= order.id %><br>
-  <% end %>
+  <% end %><br>
   <button class="js-more" data-id="<%= product.id %>">More Info</button>
 <% end %>
 

@@ -2,11 +2,13 @@
 <% @products.each do |product| %>
   <h3><%= product.name %></h3>
   <div id="product-<%= product.id %>"><%= truncate(product.description) %></div>
-  <%= product.orders.each do |order| %>
-    <%= order.invoice_id %><br>
-  <% end %><br>
+
   <button class="js-more" data-id="<%= product.id %>">More Info</button>
 <% end %>
+
+<%= product.orders.each do |order| %>
+  <%= order.invoice_id %><br>
+<% end %><br>
 
 <script type="text/javascript" charset="utf-8">
 $(function() {

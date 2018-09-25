@@ -5,7 +5,7 @@
   <button class="js-more" data-id="<%= product.id %>">More Info</button><br>
 
   <%= product.orders.each do |order| %>
-    <%= order%><br>
+    <%= order["id"]%><br>
   <% end %><br>
 
 <% end %>
